@@ -1,47 +1,92 @@
 {
-    "name": "m3RBN Collab Board",
-    "maintainer": "neamatullah-JRC",
-    "websiteURL": "https://jrc.captainelectronicsbd.com/neamatullah/contact/",
-    "email": "juniorroboticsclub@gmail.com",
-    "platforms": [
-      {
-        "name": "ESP32",
-        "architecture": "esp32",
-        "version": "1.0.0",
-        "category": "Custom Boards",
-        "url": "https://github.com/espressif/arduino-esp32/releases/download/2.0.11/esp32-2.0.11.zip",
-        "archiveFileName": "esp32-2.0.11.zip",
-        "checksum": "SHA-256:d15386308dc72f94816ce80b5508af999f2fd0d88eb5e1ffba48316ab0b9c5d6",
-        "size": "250401265",
-        "boards": [
-          {
-            "name": "ESP32 Board",
-            "vid": "10C4",
-            "pid": "EA60",
-            "uid": "esp32",
-            "chip_select": "USE_ESP32"
-          }
-        ]
-      },
-      {
-        "name": "STM32",
-        "architecture": "STM32F1",
-        "version": "1.0.0",
-        "category": "Custom Boards",
-        "url": "http://dan.drown.org/stm32duino/STM32F1-2020.1.17.zip",
-        "archiveFileName": "STM32F1-2020.1.17.zip",
-        "checksum": "SHA-256:1bab3a6c8027981182cfd61c8588503d69b7b92a9e2b547a8d4fb86a167ea4cf",
-        "size": "8953132",
-        "boards": [
-          {
-            "name": "STM32 Board",
-            "vid": "0483",
-            "pid": "5740",
-            "uid": "stm32",
-            "chip_select": "USE_STM32"
-          }
-        ]
-      }
-    ]
-  }
-  
+  "name": "m3RBN Collab Board",
+  "maintainer": "neamatullah-JRC",
+  "websiteURL": "https://jrc.captainelectronicsbd.com/neamatullah/contact/",
+  "email": "juniorroboticsclub@gmail.com",
+  "platforms": [
+    {
+      "name": "ESP32",
+      "architecture": "esp32",
+      "version": "1.0.0",
+      "category": "Custom Boards",
+      "toolsDependencies": [
+        {
+          "packager": "esp32",
+          "name": "xtensa-esp32-elf-gcc",
+          "version": "2.0.11"
+        }
+      ],
+      "url": "https://github.com/espressif/arduino-esp32/releases/download/2.0.11/esp32-2.0.11.zip",
+      "archiveFileName": "esp32-2.0.11.zip",
+      "checksum": "SHA-256:d15386308dc72f94816ce80b5508af999f2fd0d88eb5e1ffba48316ab0b9c5d6",
+      "size": "250401265",
+      "boards": [
+        {
+          "name": "ESP32 Board",
+          "vid": "10C4",
+          "pid": "EA60",
+          "uid": "esp32",
+          "chip_select": "USE_ESP32"
+        }
+      ]
+    },
+    {
+      "name": "STM32",
+      "architecture": "STM32F1",
+      "version": "1.0.0",
+      "category": "Custom Boards",
+      "toolsDependencies": [
+        {
+          "packager": "stm32duino",
+          "name": "arm-none-eabi-gcc",
+          "version": "2020.1.17"
+        }
+      ],
+      "url": "http://dan.drown.org/stm32duino/STM32F1-2020.1.17.zip",
+      "archiveFileName": "STM32F1-2020.1.17.zip",
+      "checksum": "SHA-256:1bab3a6c8027981182cfd61c8588503d69b7b92a9e2b547a8d4fb86a167ea4cf",
+      "size": "8953132",
+      "boards": [
+        {
+          "name": "STM32 Board",
+          "vid": "0483",
+          "pid": "5740",
+          "uid": "stm32",
+          "chip_select": "USE_STM32"
+        }
+      ]
+    }
+  ],
+  "packages": [
+    {
+      "name": "esp32",
+      "maintainer": "Espressif Systems",
+      "websiteURL": "https://www.espressif.com/",
+      "email": "support@espressif.com",
+      "version": "2.0.11",
+      "platforms": [
+        {
+          "name": "ESP32",
+          "architecture": "esp32",
+          "version": "1.0.0",
+          "category": "Custom Boards"
+        }
+      ]
+    },
+    {
+      "name": "stm32duino",
+      "maintainer": "STM32duino",
+      "websiteURL": "https://github.com/stm32duino",
+      "email": "support@stm32duino.com",
+      "version": "2020.1.17",
+      "platforms": [
+        {
+          "name": "STM32",
+          "architecture": "STM32F1",
+          "version": "1.0.0",
+          "category": "Custom Boards"
+        }
+      ]
+    }
+  ]
+}
