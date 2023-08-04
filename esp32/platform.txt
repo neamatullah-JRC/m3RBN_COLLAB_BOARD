@@ -1,0 +1,21 @@
+##############################################################
+
+compiler.path={runtime.tools.xtensa-esp32-elf-gcc.path}/bin/
+compiler.c.cmd={compiler.path}xtensa-esp32-elf-gcc
+compiler.c.flags=-c -g -Os -w -ffunction-sections -fdata-sections -std=gnu11 -fno-exceptions -Wno-error=deprecated-declarations -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wno-unused-parameter -Wno-sign-compare -fstack-protector -Wno-error=maybe-uninitialized -Wno-error=uninitialized -Wno-error=unused-label -Wno-error=unused-value -Wno-error=unknown-pragmas -Wno-error=unused-function -Wno-error=shadow -Wno-error=maybe-uninitialized -Wno-error=deprecated-declarations -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=unused-label -Wno-error=unused-value -Wno-error=cpp -fno-rtti -MMD
+compiler.c.elf.cmd={compiler.path}xtensa-esp32-elf-gcc
+compiler.cpp.cmd={compiler.path}xtensa-esp32-elf-g++
+compiler.cpp.flags=-c -g -Os -w -ffunction-sections -fdata-sections -std=gnu++11 -fno-rtti -fno-exceptions -Wno-error=narrowing -Wno-error=deprecated-declarations -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wno-unused-parameter -Wno-sign-compare -fstack-protector -Wno-error=maybe-uninitialized -Wno-error=uninitialized -Wno-error=unused-label -Wno-error=unused-value -Wno-error=unknown-pragmas -Wno-error=unused-function -Wno-error=shadow -Wno-error=maybe-uninitialized -Wno-error=deprecated-declarations -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=unused-label -Wno-error=unused-value -Wno-error=cpp -MMD
+compiler.S.flags=-c -g -x assembler-with-cpp
+compiler.ar.cmd={compiler.path}xtensa-esp32-elf-ar
+compiler.ar.flags=rcs
+compiler.objcopy.cmd={compiler.path}xtensa-esp32-elf-objcopy
+compiler.objcopy.eep.flags=-O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0
+compiler.elf2hex.cmd={compiler.path}xtensa-esp32-elf-objcopy
+compiler.elf2hex.eep.flags=-O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0
+compiler.elf2hex.flash.flags=-O ihex -R .comment -R .note -R .version
+compiler.ldflags=-w -Wl,-n,--demangle,--cref -Wl,--gc-sections -u call_user_start_cpu0 -Wl,-static
+compiler.size.cmd={compiler.path}xtensa-esp32-elf-size
+compiler.size.flags=-A
+
+##############################################################

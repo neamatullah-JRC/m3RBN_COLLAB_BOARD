@@ -1,0 +1,29 @@
+##############################################################
+
+esp32.name=ESP32 Board
+esp32.upload.tool=esptool_py
+esp32.upload.protocol=serial
+esp32.upload.maximum_size=1310720
+esp32.upload.maximum_data_size=196608
+esp32.upload.wait_for_upload_port=true
+esp32.upload.use_1200bps_touch=true
+esp32.upload.speed=115200
+esp32.upload.disable_flushing=true
+esp32.upload.params.verbose=
+esp32.upload.params.quiet=
+esp32.upload.params.verify=
+esp32.upload.params.disable=
+esp32.upload.params.erase=
+esp32.upload.params.erase_cmd=
+esp32.upload.params.before=
+esp32.upload.params.after=
+
+esp32.build.mcu=esp32
+esp32.build.f_cpu=240000000L
+esp32.build.board=ESP32_DEV
+esp32.build.core=esp32
+esp32.build.variant=esp32
+esp32.build.tools=esp32
+esp32.build.extra_flags=-D__ets__ -DICACHE_FLASH
+
+##############################################################

@@ -1,0 +1,25 @@
+##############################################################
+
+stm32.name=STM32 Board
+stm32.upload.tool=stm32flash
+stm32.upload.protocol=serial
+stm32.upload.maximum_size=65536
+stm32.upload.maximum_data_size=2048
+stm32.upload.speed=115200
+stm32.upload.disable_flushing=true
+stm32.upload.use_1200bps_touch=true
+stm32.upload.wait_for_upload_port=true
+stm32.upload.params.quiet=
+stm32.upload.params.verify=
+stm32.upload.params.disable=
+stm32.upload.params.before=
+stm32.upload.params.after=
+
+stm32.build.mcu=cortex-m3
+stm32.build.f_cpu=72000000L
+stm32.build.board=STM32F103C8
+stm32.build.core=arduino
+stm32.build.variant=generic
+stm32.build.extra_flags=-DSTM32F10X_MD -DVECT_TAB_ADDR=0x8005000 -DARDUINO_GENERIC_STM32F103C
+
+##############################################################
